@@ -1,8 +1,4 @@
 <!-- DarkNode Build -->
-<script>
-// System initialized... Flag cache cleared...
-// DEBUG: flag_meta[0x03] = 'flag{v2.0.7}'; -- remove in production
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -110,12 +106,12 @@
    
     <div class="card">
       <h2>Node Status</h2>
-      <p>Flames265 node is online. <br/> Data Encrypted </p>
+      <p>Flames265 node is online. <br/> Data Encrypted. </p>
     </div>
 
     <div class="card">
       <h2>Channels Status</h2>
-      <p>Radio frequency is off the radar. <br/> Data Encrypted </p>
+      <p>Radio frequency is off the radar. <br/> Signal Blocked. </p>
     </div>
 
     <div class="card">
@@ -123,7 +119,7 @@
       <ul>
         <li>[2025-05-11 22:18:54] Node α Flames265 rebooted</li>
         <li>[2025-05-11 22:18:56] Node α Flames265 connected</li>
-        <li>[2025-05-12 01:42:03] Network Encryption Started...</li>
+        <li>[2025-05-12 01:42:03] Data Transfer Started...</li>
       </ul>
     </div>
 	
@@ -135,10 +131,10 @@
     </script>
 	
     <div class="card">
-      <h2>Access Dark Node NETWORK</h2>
+      <h2>Access DarkNode NETWORK</h2>
       <p>Biometrics Required!</p>
       <button class="hint-button" onclick="toggleHint()">ENTER</button>
-      <div class="hint" id="hintBox">System LOCKED!</div>
+      <div class="hint" id="hintBox">System LOCKED</div>
     </div>
   </main>
 
@@ -146,5 +142,14 @@
     ⚠️ This website is part of a cybersecurity Capture The Flag (CTF) challenge. It is entirely fictional and not affiliated with any real organization.
   </div>
 
+  <script>
+    function toggleHint() {
+      const hint = document.getElementById("hintBox");
+      hint.style.display = hint.style.display === "none" ? "block" : "none";
+    }
+    window.onload = () => {
+      document.getElementById("hintBox").style.display = "none";
+    };
+  </script>
 </body>
 </html>
