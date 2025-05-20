@@ -1,112 +1,185 @@
+ <!-- DarkNode Build -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>University Student Portal</title>
+  <title>DarkNode Gateway</title>
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Courier New', monospace;
       margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #0d0d0d;
+      color: #33ff33;
     }
     header {
-      background-color: #00274d;
-      color: #fff;
-      padding: 20px;
+      background-color: #111;
+      padding: 30px;
       text-align: center;
+      border-bottom: 2px solid #33ff33;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin: 0;
+    }
+    header p {
+      font-style: italic;
+      color: #888;
     }
     nav {
-      background: #e0e0e0;
-      padding: 15px;
+      background: #1a1a1a;
       display: flex;
       justify-content: space-around;
+      padding: 15px;
+      border-bottom: 1px solid #444;
     }
     nav a {
       text-decoration: none;
-      color: #00274d;
+      color: #33ff33;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffcc;
     }
     main {
-      padding: 30px;
+      padding: 40px;
       max-width: 900px;
       margin: auto;
     }
     .card {
-      background-color: #fff;
-      padding: 20px;
+      background-color: #1c1c1c;
+      border: 1px solid #333;
+      padding: 25px;
       margin: 20px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 5px;
+    }
+    .card h2 {
+      color: #00ffcc;
     }
     .hint-button {
-      background-color: #00274d;
-      color: white;
+      background-color: #33ff33;
+      color: #000;
       border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
+      padding: 10px 20px;
+      border-radius: 3px;
       cursor: pointer;
       margin-top: 10px;
     }
     .hint {
       display: none;
       margin-top: 10px;
-      background: #e0f7fa;
+      background: #002b36;
       padding: 10px;
-      border-radius: 5px;
+      color: #7fffd4;
+      border-radius: 3px;
+    }
+    .disclaimer {
+      background: #111;
+      color: #888;
+      font-size: 0.9em;
+      padding: 10px;
+      text-align: center;
+      border-top: 1px solid #444;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Student Portal - Flames265 University</h1>
-    <p>Welcome to your academic dashboard</p>
+    <h1>DarkNode Gateway</h1>
+    <p>Access Point: UNIV-X Secure Uplink</p>
   </header>
+<!--orem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis nulla rhoncus justo venenatis rhoncus eu vitae leo. Ut venenatis eros quis orci accumsan, ut ornare mauris aliquam. Sed fringilla tortor ac malesuada elementum. Phasellus sit amet sollicitudin dolor. Morbi blandit ante sed suscipit euismod. Etiam non fringilla purus, eget dignissim massa. Curabitur consectetur rhoncus iaculis. Praesent imperdiet elit nec viverra volutpat. Proin consequat viverra lectus, non pretium leo lobortis pulvinar.
 
+In odio magna, elementum eget feugiat at, condimentum sed sapien. Quisque eleifend at diam vel auctor. Etiam ac auctor augue, nec sollicitudin sem. Morbi interdum tempus rutrum. Nullam bibendum semper arcu eu tempor. Vestibulum aliquam ex vel ex fringilla, sed euismod arcu fermentum. Nullam eu tellus sed quam convallis tempor eu ut eros. Quisque eget consequat ipsum. Duis eu ullamcorper nunc. Quisque nec arcu ut risus vestibulum accumsan.
+
+Morbi iaculis pellentesque tincidunt. Pellentesque pellentesque, sem nec egestas ultrices, nibh ante fringilla quam, sit amet finibus sem tortor non odio. Donec suscipit elementum nunc et rhoncus. Nullam a condimentum sem. Nam sodales lectus turpis, sed mattis purus viverra at. Fusce sodales tellus at nunc ultricies porttitor. Nullam aliquam nisl erat, vel luctus libero suscipit ut. Sed hendrerit risus justo. Vivamus laoreet nunc velit, ut euismod dolor varius vel. Quisque elit sapien, vulputate sed lacinia at, pretium nec orci. Pellentesque nec velit sollicitudin, pellentesque metus nec, sollicitudin quam.
+
+In fermentum fermentum risus sit amet interdum. Maecenas ut ligula magna. Sed efficitur mauris ante, sed porttitor lectus eleifend sed. Vestibulum euismod in sem in tincidunt. Phasellus egestas velit eu molestie eleifend. Cras ac laoreet sapien. Aliquam sollicitudin justo diam, sed viverra sapien convallis at. Praesent eu sollicitudin leo. In interdum arcu a nisi vulputate, nec pulvinar nisl porta. In a diam in augue volutpat sollicitudin id vel nisl. Ut id odio tellus. Donec nisi turpis, elementum quis massa quis, tempus molestie velit. Morbi vitae quam dignissim, placerat turpis eget, egestas purus.
+
+Praesent eu tortor sed odio vehicula interdum. Donec eleifend molestie nulla, non viverra est. Nam pellentesque velit id urna sodales, sed accumsan orci posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie egestas sagittis. Etiam ac sapien et risus placerat lacinia. Duis semper aliquet leo, ac laoreet odio ultrices ac. Pellentesque quis nunc velit. Phasellus sodales quam eleifend elementum sagittis. Donec fringilla lobortis metus, tincidunt fermentum lorem tempor et. In hac habitasse platea dictumst. Cras bibendum cursus blandit. Ut quis massa eget enim commodo pharetra eget ut purus. -->
   <nav>
-    <a href="#">Dashboard</a>
-    <a href="#">Grades</a>
-    <a href="#">Courses</a>
-    <a href="#">Messages</a>
-    <a href="#">Settings</a>
+    <a href="#">Mainframe</a>
+    <a href="#">Logs</a>
+    <a href="#">Terminal</a>
+    <a href="#">Nodes</a>
+    <a href="#">Config</a>
   </nav>
+<!--orem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis nulla rhoncus justo venenatis rhoncus eu vitae leo. Ut venenatis eros quis orci accumsan, ut ornare mauris aliquam. Sed fringilla tortor ac malesuada elementum. Phasellus sit amet sollicitudin dolor. Morbi blandit ante sed suscipit euismod. Etiam non fringilla purus, eget dignissim massa. Curabitur consectetur rhoncus iaculis. Praesent imperdiet elit nec viverra volutpat. Proin consequat viverra lectus, non pretium leo lobortis pulvinar.
 
+In odio magna, elementum eget feugiat at, condimentum sed sapien. Quisque eleifend at diam vel auctor. Etiam ac auctor augue, nec sollicitudin sem. Morbi interdum tempus rutrum. Nullam bibendum semper arcu eu tempor. Vestibulum aliquam ex vel ex fringilla, sed euismod arcu fermentum. Nullam eu tellus sed quam convallis tempor eu ut eros. Quisque eget consequat ipsum. Duis eu ullamcorper nunc. Quisque nec arcu ut risus vestibulum accumsan.
+
+Morbi iaculis pellentesque tincidunt. Pellentesque pellentesque, sem nec egestas ultrices, nibh ante fringilla quam, sit amet finibus sem tortor non odio. Donec suscipit elementum nunc et rhoncus. Nullam a condimentum sem. Nam sodales lectus turpis, sed mattis purus viverra at. Fusce sodales tellus at nunc ultricies porttitor. Nullam aliquam nisl erat, vel luctus libero suscipit ut. Sed hendrerit risus justo. Vivamus laoreet nunc velit, ut euismod dolor varius vel. Quisque elit sapien, vulputate sed lacinia at, pretium nec orci. Pellentesque nec velit sollicitudin, pellentesque metus nec, sollicitudin quam.
+
+In fermentum fermentum risus sit amet interdum. Maecenas ut ligula magna. Sed efficitur mauris ante, sed porttitor lectus eleifend sed. Vestibulum euismod in sem in tincidunt. Phasellus egestas velit eu molestie eleifend. Cras ac laoreet sapien. Aliquam sollicitudin justo diam, sed viverra sapien convallis at. Praesent eu sollicitudin leo. In interdum arcu a nisi vulputate, nec pulvinar nisl porta. In a diam in augue volutpat sollicitudin id vel nisl. Ut id odio tellus. Donec nisi turpis, elementum quis massa quis, tempus molestie velit. Morbi vitae quam dignissim, placerat turpis eget, egestas purus.
+
+Praesent eu tortor sed odio vehicula interdum. Donec eleifend molestie nulla, non viverra est. Nam pellentesque velit id urna sodales, sed accumsan orci posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie egestas sagittis. Etiam ac sapien et risus placerat lacinia. Duis semper aliquet leo, ac laoreet odio ultrices ac. Pellentesque quis nunc velit. Phasellus sodales quam eleifend elementum sagittis. Donec fringilla lobortis metus, tincidunt fermentum lorem tempor et. In hac habitasse platea dictumst. Cras bibendum cursus blandit. Ut quis massa eget enim commodo pharetra eget ut purus. -->
   <main>
     <div class="card">
-      <h2>Announcements</h2>
-      <p>Midterm results will be released soon. Stay tuned!</p>
+      <h2>Network Status</h2>
+      <p>Pulse is active. <br/> No unauthorized entry detected. <br/> Last anomaly: 14 days ago.</p>
     </div>
+<!--orem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis nulla rhoncus justo venenatis rhoncus eu vitae leo. Ut venenatis eros quis orci accumsan, ut ornare mauris aliquam. Sed fringilla tortor ac malesuada elementum. Phasellus sit amet sollicitudin dolor. Morbi blandit ante sed suscipit euismod. Etiam non fringilla purus, eget dignissim massa. Curabitur consectetur rhoncus iaculis. Praesent imperdiet elit nec viverra volutpat. Proin consequat viverra lectus, non pretium leo lobortis pulvinar.
 
+In odio magna, elementum eget feugiat at, condimentum sed sapien. Quisque eleifend at diam vel auctor. Etiam ac auctor augue, nec sollicitudin sem. Morbi interdum tempus rutrum. Nullam bibendum semper arcu eu tempor. Vestibulum aliquam ex vel ex fringilla, sed euismod arcu fermentum. Nullam eu tellus sed quam convallis tempor eu ut eros. Quisque eget consequat ipsum. Duis eu ullamcorper nunc. Quisque nec arcu ut risus vestibulum accumsan.
+
+Morbi iaculis pellentesque tincidunt. Pellentesque pellentesque, sem nec egestas ultrices, nibh ante fringilla quam, sit amet finibus sem tortor non odio. Donec suscipit elementum nunc et rhoncus. Nullam a condimentum sem. Nam sodales lectus turpis, sed mattis purus viverra at. Fusce sodales tellus at nunc ultricies porttitor. Nullam aliquam nisl erat, vel luctus libero suscipit ut. Sed hendrerit risus justo. Vivamus laoreet nunc velit, ut euismod dolor varius vel. Quisque elit sapien, vulputate sed lacinia at, pretium nec orci. Pellentesque nec velit sollicitudin, pellentesque metus nec, sollicitudin quam.
+
+In fermentum fermentum risus sit amet interdum. Maecenas ut ligula magna. Sed efficitur mauris ante, sed porttitor lectus eleifend sed. Vestibulum euismod in sem in tincidunt. Phasellus egestas velit eu molestie eleifend. Cras ac laoreet sapien. Aliquam sollicitudin justo diam, sed viverra sapien convallis at. Praesent eu sollicitudin leo. In interdum arcu a nisi vulputate, nec pulvinar nisl porta. In a diam in augue volutpat sollicitudin id vel nisl. Ut id odio tellus. Donec nisi turpis, elementum quis massa quis, tempus molestie velit. Morbi vitae quam dignissim, placerat turpis eget, egestas purus.
+
+Praesent eu tortor sed odio vehicula interdum. Donec eleifend molestie nulla, non viverra est. Nam pellentesque velit id urna sodales, sed accumsan orci posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie egestas sagittis. Etiam ac sapien et risus placerat lacinia. Duis semper aliquet leo, ac laoreet odio ultrices ac. Pellentesque quis nunc velit. Phasellus sodales quam eleifend elementum sagittis. Donec fringilla lobortis metus, tincidunt fermentum lorem tempor et. In hac habitasse platea dictumst. Cras bibendum cursus blandit. Ut quis massa eget enim commodo pharetra eget ut purus. -->
     <div class="card">
-      <h2>Upcoming Events</h2>
+      <h2>Terminal Broadcasts</h2>
       <ul>
-        <li>📚 Library Orientation – May 25</li>
-        <li>🎉 Campus Fest – June 2</li>
+        <li>[2025-05-11 22:18:54] Node α172 rebooted</li>
+        <li>[2025-05-12 01:42:03] Encrypted packet queued for decode</li>
       </ul>
     </div>
+<!--orem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis nulla rhoncus justo venenatis rhoncus eu vitae leo. Ut venenatis eros quis orci accumsan, ut ornare mauris aliquam. Sed fringilla tortor ac malesuada elementum. Phasellus sit amet sollicitudin dolor. Morbi blandit ante sed suscipit euismod. Etiam non fringilla purus, eget dignissim massa. Curabitur consectetur rhoncus iaculis. Praesent imperdiet elit nec viverra volutpat. Proin consequat viverra lectus, non pretium leo lobortis pulvinar.
 
+In odio magna, elementum eget feugiat at, condimentum sed sapien.  ****flag{v2.0.7}**** Quisque eleifend at diam vel auctor. Etiam ac auctor augue, nec sollicitudin sem. Morbi interdum tempus rutrum. Nullam bibendum semper arcu eu tempor. Vestibulum aliquam ex vel ex fringilla, sed euismod arcu fermentum. Nullam eu tellus sed quam convallis tempor eu ut eros. Quisque eget consequat ipsum. Duis eu ullamcorper nunc. Quisque nec arcu ut risus vestibulum accumsan.
+
+Morbi iaculis pellentesque tincidunt. Pellentesque pellentesque, sem nec egestas ultrices, nibh ante fringilla quam, sit amet finibus sem tortor non odio. Donec suscipit elementum nunc et rhoncus. Nullam a condimentum sem. Nam sodales lectus turpis, sed mattis purus viverra at. Fusce sodales tellus at nunc ultricies porttitor. Nullam aliquam nisl erat, vel luctus libero suscipit ut. Sed hendrerit risus justo. Vivamus laoreet nunc velit, ut euismod dolor varius vel. Quisque elit sapien, vulputate sed lacinia at, pretium nec orci. Pellentesque nec velit sollicitudin, pellentesque metus nec, sollicitudin quam.
+
+In fermentum fermentum risus sit amet interdum. Maecenas ut ligula magna. Sed efficitur mauris ante, sed porttitor lectus eleifend sed. Vestibulum euismod in sem in tincidunt. Phasellus egestas velit eu molestie eleifend. Cras ac laoreet sapien. Aliquam sollicitudin justo diam, sed viverra sapien convallis at. Praesent eu sollicitudin leo. In interdum arcu a nisi vulputate, nec pulvinar nisl porta. In a diam in augue volutpat sollicitudin id vel nisl. Ut id odio tellus. Donec nisi turpis, elementum quis massa quis, tempus molestie velit. Morbi vitae quam dignissim, placerat turpis eget, egestas purus.
+
+Praesent eu tortor sed odio vehicula interdum. Donec eleifend molestie nulla, non viverra est. Nam pellentesque velit id urna sodales, sed accumsan orci posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie egestas sagittis. Etiam ac sapien et risus placerat lacinia. Duis semper aliquet leo, ac laoreet odio ultrices ac. Pellentesque quis nunc velit. Phasellus sodales quam eleifend elementum sagittis. Donec fringilla lobortis metus, tincidunt fermentum lorem tempor et. In hac habitasse platea dictumst. Cras bibendum cursus blandit. Ut quis massa eget enim commodo pharetra eget ut purus. -->
     <div class="card">
-      <h2>Need a Hint?</h2>
-      <button class="hint-button" onclick="toggleHint()">Free Hint</button>
-      <div class="hint" id="hintBox">Sometimes, looking beneath the surface reveals hidden truths.</div>
+      <h2>Decrypt Instructions</h2>
+      <p>Execute your analysis. Use all means necessary to extract the embedded signal.</p>
+      <button class="hint-button" onclick="toggleHint()">Request Hint</button>
+      <div class="hint" id="hintBox">Digital ghosts hide in plain text. Look beyond what the screen shows.</div>
     </div>
   </main>
 
-  <footer style="text-align:center; padding:20px; background:#ddd; color:#555;">
-    &copy; 2025 Flames265 University | All rights reserved
-  </footer>
+  <div class="disclaimer">
+    ⚠️ This website is part of a cybersecurity Capture The Flag (CTF) challenge. It is entirely fictional and not affiliated with any real organization.
+  </div>
+<!--orem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis nulla rhoncus justo venenatis rhoncus eu vitae leo. Ut venenatis eros quis orci accumsan, ut ornare mauris aliquam. Sed fringilla tortor ac malesuada elementum. Phasellus sit amet sollicitudin dolor. Morbi blandit ante sed suscipit euismod. Etiam non fringilla purus, eget dignissim massa. Curabitur consectetur rhoncus iaculis. Praesent imperdiet elit nec viverra volutpat. Proin consequat viverra lectus, non pretium leo lobortis pulvinar.
 
-  <!-- Student Portal Version 3.1.4 -->
-  <!-- FLAG{view_source_knows_all} -->
+In odio magna, elementum eget feugiat at, condimentum sed sapien. Quisque eleifend at diam vel auctor. Etiam ac auctor augue, nec sollicitudin sem. Morbi interdum tempus rutrum. Nullam bibendum semper arcu eu tempor. Vestibulum aliquam ex vel ex fringilla, sed euismod arcu fermentum. Nullam eu tellus sed quam convallis tempor eu ut eros. Quisque eget consequat ipsum. Duis eu ullamcorper nunc. Quisque nec arcu ut risus vestibulum accumsan.
 
+Morbi iaculis pellentesque tincidunt. Pellentesque pellentesque, sem nec egestas ultrices, nibh ante fringilla quam, sit amet finibus sem tortor non odio. Donec suscipit elementum nunc et rhoncus. Nullam a condimentum sem. Nam sodales lectus turpis, sed mattis purus viverra at. Fusce sodales tellus at nunc ultricies porttitor. Nullam aliquam nisl erat, vel luctus libero suscipit ut. Sed hendrerit risus justo. Vivamus laoreet nunc velit, ut euismod dolor varius vel. Quisque elit sapien, vulputate sed lacinia at, pretium nec orci. Pellentesque nec velit sollicitudin, pellentesque metus nec, sollicitudin quam.
+
+In fermentum fermentum risus sit amet interdum. Maecenas ut ligula magna. Sed efficitur mauris ante, sed porttitor lectus eleifend sed. Vestibulum euismod in sem in tincidunt. Phasellus egestas velit eu molestie eleifend. Cras ac laoreet sapien. Aliquam sollicitudin justo diam, sed viverra sapien convallis at. Praesent eu sollicitudin leo. In interdum arcu a nisi vulputate, nec pulvinar nisl porta. In a diam in augue volutpat sollicitudin id vel nisl. Ut id odio tellus. Donec nisi turpis, elementum quis massa quis, tempus molestie velit. Morbi vitae quam dignissim, placerat turpis eget, egestas purus.
+
+Praesent eu tortor sed odio vehicula interdum. Donec eleifend molestie nulla, non viverra est. Nam pellentesque velit id urna sodales, sed accumsan orci posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie egestas sagittis. Etiam ac sapien et risus placerat lacinia. Duis semper aliquet leo, ac laoreet odio ultrices ac. Pellentesque quis nunc velit. Phasellus sodales quam eleifend elementum sagittis. Donec fringilla lobortis metus, tincidunt fermentum lorem tempor et. In hac habitasse platea dictumst. Cras bibendum cursus blandit. Ut quis massa eget enim commodo pharetra eget ut purus. -->
+
+<!--orem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis nulla rhoncus justo venenatis rhoncus eu vitae leo. Ut venenatis eros quis orci accumsan, ut ornare mauris aliquam. Sed fringilla tortor ac malesuada elementum. Phasellus sit amet sollicitudin dolor. Morbi blandit ante sed suscipit euismod. Etiam non fringilla purus, eget dignissim massa. Curabitur consectetur rhoncus iaculis. Praesent imperdiet elit nec viverra volutpat. Proin consequat viverra lectus, non pretium leo lobortis pulvinar.
+
+In odio magna, elementum eget feugiat at, condimentum sed sapien. Quisque eleifend at diam vel auctor. Etiam ac auctor augue, nec sollicitudin sem. Morbi interdum tempus rutrum. Nullam bibendum semper arcu eu tempor. Vestibulum aliquam ex vel ex fringilla, sed euismod arcu fermentum. Nullam eu tellus sed quam convallis tempor eu ut eros. Quisque eget consequat ipsum. Duis eu ullamcorper nunc. Quisque nec arcu ut risus vestibulum accumsan.
+
+Morbi iaculis pellentesque tincidunt. Pellentesque pellentesque, sem nec egestas ultrices, nibh ante fringilla quam, sit amet finibus sem tortor non odio. Donec suscipit elementum nunc et rhoncus. Nullam a condimentum sem. Nam sodales lectus turpis, sed mattis purus viverra at. Fusce sodales tellus at nunc ultricies porttitor. Nullam aliquam nisl erat, vel luctus libero suscipit ut. Sed hendrerit risus justo. Vivamus laoreet nunc velit, ut euismod dolor varius vel. Quisque elit sapien, vulputate sed lacinia at, pretium nec orci. Pellentesque nec velit sollicitudin, pellentesque metus nec, sollicitudin quam.
+
+In fermentum fermentum risus sit amet interdum. Maecenas ut ligula magna. Sed efficitur mauris ante, sed porttitor lectus eleifend sed. Vestibulum euismod in sem in tincidunt. Phasellus egestas velit eu molestie eleifend. Cras ac laoreet sapien. Aliquam sollicitudin justo diam, sed viverra sapien convallis at. Praesent eu sollicitudin leo. In interdum arcu a nisi vulputate, nec pulvinar nisl porta. In a diam in augue volutpat sollicitudin id vel nisl. Ut id odio tellus. Donec nisi turpis, elementum quis massa quis, tempus molestie velit. Morbi vitae quam dignissim, placerat turpis eget, egestas purus.
+
+Praesent eu tortor sed odio vehicula interdum. Donec eleifend molestie nulla, non viverra est. Nam pellentesque velit id urna sodales, sed accumsan orci posuere. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent molestie egestas sagittis. Etiam ac sapien et risus placerat lacinia. Duis semper aliquet leo, ac laoreet odio ultrices ac. Pellentesque quis nunc velit. Phasellus sodales quam eleifend elementum sagittis. Donec fringilla lobortis metus, tincidunt fermentum lorem tempor et. In hac habitasse platea dictumst. Cras bibendum cursus blandit. Ut quis massa eget enim commodo pharetra eget ut purus. -->
   <script>
     function toggleHint() {
       const hint = document.getElementById("hintBox");
       hint.style.display = hint.style.display === "none" ? "block" : "none";
     }
-    // Hide hint by default on load
     window.onload = () => {
       document.getElementById("hintBox").style.display = "none";
     };
