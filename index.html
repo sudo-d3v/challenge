@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>University Student Portal</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #00274d;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #e0e0e0;
+      padding: 15px;
+      display: flex;
+      justify-content: space-around;
+    }
+    nav a {
+      text-decoration: none;
+      color: #00274d;
+      font-weight: bold;
+    }
+    main {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .hint-button {
+      background-color: #00274d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .hint {
+      display: none;
+      margin-top: 10px;
+      background: #e0f7fa;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Student Portal - Flames265 University</h1>
+    <p>Welcome to your academic dashboard</p>
+  </header>
+
+  <nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Grades</a>
+    <a href="#">Courses</a>
+    <a href="#">Messages</a>
+    <a href="#">Settings</a>
+  </nav>
+
+  <main>
+    <div class="card">
+      <h2>Announcements</h2>
+      <p>Midterm results will be released soon. Stay tuned!</p>
+    </div>
+
+    <div class="card">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>📚 Library Orientation – May 25</li>
+        <li>🎉 Campus Fest – June 2</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Need a Hint?</h2>
+      <button class="hint-button" onclick="toggleHint()">Free Hint</button>
+      <div class="hint" id="hintBox">Sometimes, looking beneath the surface reveals hidden truths.</div>
+    </div>
+  </main>
+
+  <footer style="text-align:center; padding:20px; background:#ddd; color:#555;">
+    &copy; 2025 Flames265 University | All rights reserved
+  </footer>
+
+  <!-- Student Portal Version 3.1.4 -->
+  <!-- FLAG{view_source_knows_all} -->
+
+  <script>
+    function toggleHint() {
+      const hint = document.getElementById("hintBox");
+      hint.style.display = hint.style.display === "none" ? "block" : "none";
+    }
+    // Hide hint by default on load
+    window.onload = () => {
+      document.getElementById("hintBox").style.display = "none";
+    };
+  </script>
+
+</body>
+</html>
