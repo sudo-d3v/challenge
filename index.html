@@ -10,37 +10,45 @@
       font-family: 'Courier New', monospace;
       margin: 0;
       background-color: #0d0d0d;
-      color: #33ff33;
+      color: #11DAF5;
     }
     header {
-      background-color: #111;
+      background: linear-gradient(90deg, #9025B0, #C71852);
       padding: 30px;
       text-align: center;
-      border-bottom: 2px solid #33ff33;
+      border-bottom: 3px solid #11DAF5;
     }
     header h1 {
       font-size: 2.5em;
       margin: 0;
+      color: #11DAF5;
     }
     header p {
       font-style: italic;
-      color: #888;
+      color: #ddd;
     }
     nav {
       background: #1a1a1a;
       display: flex;
       justify-content: space-around;
       padding: 15px;
-      border-bottom: 1px solid #444;
+      border-bottom: 2px solid #9025B0;
     }
-    nav a {
+    nav a button {
       text-decoration: none;
-      color: #33ff33;
+      background: linear-gradient(135deg, #C71852, #9025B0);
+      color: #fff;
       font-weight: bold;
-      transition: color 0.3s;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
     }
-    nav a:hover {
-      color: #00ffcc;
+    nav a button:hover {
+      background: #11DAF5;
+      color: #000;
+      transform: scale(1.05);
     }
     main {
       padding: 40px;
@@ -52,35 +60,47 @@
       border: 1px solid #333;
       padding: 25px;
       margin: 20px 0;
-      border-radius: 5px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(144, 37, 176, 0.4);
     }
     .card h2 {
-      color: #00ffcc;
+      color: #C71852;
+      margin-bottom: 15px;
+    }
+    .card p, .card ul {
+      color: #ccc;
+      line-height: 1.6em;
     }
     .hint-button {
-      background-color: #33ff33;
+      background: #11DAF5;
       color: #000;
       border: none;
       padding: 10px 20px;
-      border-radius: 3px;
+      border-radius: 5px;
       cursor: pointer;
       margin-top: 10px;
+      transition: background 0.3s;
+    }
+    .hint-button:hover {
+      background: #9025B0;
+      color: #fff;
     }
     .hint {
       display: none;
       margin-top: 10px;
-      background: #002b36;
+      background: #222;
       padding: 10px;
-      color: #7fffd4;
-      border-radius: 3px;
+      color: #11DAF5;
+      border-radius: 5px;
+      border: 1px solid #9025B0;
     }
     .disclaimer {
       background: #111;
       color: #888;
       font-size: 0.9em;
-      padding: 10px;
+      padding: 12px;
       text-align: center;
-      border-top: 1px solid #444;
+      border-top: 2px solid #C71852;
     }
   </style>
 </head>
@@ -92,10 +112,10 @@
   </header>
 
   <nav>
-    <a href="#"><button class="hint-button" onclick="alert('System LOCKED')">LINKS</button></a>
-    <a href="#"><button class="hint-button" onclick="alert('System LOCKED')">NODES</button></a>
-    <a href="#"><button class="hint-button" onclick="alert('System LOCKED')">CHANNELS</button></a>
-    <a href="#"><button class="hint-button" onclick="alert('System LOCKED')">TERMINAL</button></a>
+    <a href="#"><button onclick="alert('System LOCKED')">LINKS</button></a>
+    <a href="#"><button onclick="alert('System LOCKED')">NODES</button></a>
+    <a href="#"><button onclick="alert('System LOCKED')">CHANNELS</button></a>
+    <a href="#"><button onclick="alert('System LOCKED')">TERMINAL</button></a>
   </nav>
 
   <main>
@@ -126,8 +146,7 @@
     <script>
      // System initialized... 🚩
      // DEBUG: flag_meta[0x03];
-     const a = 'fla', b = 'g{v', c = '2.', d = '0.', e = '7}';
-     const output = a + b + c + d + e;
+      f423e38a713ca4cac007bdec2dd35e1d 
     </script>
 	
     <div class="card">
