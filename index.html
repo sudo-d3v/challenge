@@ -1,4 +1,4 @@
-<!-- DarkNode Build - Hacker Vibe Compact -->
+<!-- DarkNode Build - Hacker Vibe + Matrix Background -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@
       margin: 0;
       background: var(--dark-bg);
       color: var(--neon-cyan);
-      overflow: hidden;
+      overflow-x: hidden; /* allow vertical scrolling */
     }
 
     canvas {
@@ -34,84 +34,87 @@
     }
 
     header {
-      background: rgba(0,0,0,0.8);
-      padding: 15px;
+      background: rgba(0,0,0,0.85);
+      padding: 30px;
       text-align: center;
-      border-bottom: 2px solid var(--neon-cyan);
-      box-shadow: 0 0 12px rgba(17, 218, 245, 0.5);
+      border-bottom: 3px solid var(--neon-cyan);
+      box-shadow: 0 0 20px rgba(17, 218, 245, 0.5);
     }
 
     header h1 {
-      font-size: 2em;
+      font-size: 3em;
       margin: 0;
       color: var(--neon-cyan);
-      text-shadow: 0 0 8px var(--neon-cyan);
+      text-shadow: 0 0 10px var(--neon-cyan);
     }
 
     header p {
       font-style: italic;
       color: #aaa;
-      font-size: 0.9em;
+      letter-spacing: 2px;
     }
 
     nav {
-      background: rgba(18,18,18,0.85);
+      background: rgba(18,18,18,0.9);
       display: flex;
       justify-content: center;
-      gap: 10px;
-      padding: 10px;
-      border-bottom: 1px solid var(--neon-purple);
+      gap: 20px;
+      padding: 15px;
+      border-bottom: 2px solid var(--neon-purple);
+      box-shadow: 0 0 20px rgba(144,37,176,0.3);
     }
 
     nav a button {
       background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
       color: #fff;
+      font-weight: bold;
       border: none;
-      padding: 8px 16px;
-      border-radius: 6px;
+      padding: 12px 24px;
+      border-radius: 8px;
       cursor: pointer;
-      font-size: 0.9em;
-      box-shadow: 0 0 8px rgba(199,24,82,0.4);
-      transition: 0.3s;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 12px rgba(199,24,82,0.5);
     }
 
     nav a button:hover {
       background: var(--neon-cyan);
       color: #000;
-      transform: scale(1.05);
-      box-shadow: 0 0 12px var(--neon-cyan);
+      transform: scale(1.08);
+      box-shadow: 0 0 20px var(--neon-cyan);
     }
 
     main {
+      padding: 40px;
       max-width: 1000px;
-      margin: 15px auto;
-      padding: 0 15px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 15px;
+      margin: auto;
       position: relative;
       z-index: 2;
     }
 
     .card {
-      background-color: rgba(22,22,22,0.85);
+      background-color: rgba(22,22,22,0.9);
       border: 1px solid #222;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(144,37,176,0.4);
-      font-size: 0.9em;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(144, 37, 176, 0.4);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(17, 218, 245, 0.6);
     }
 
     .card h2 {
       color: var(--neon-pink);
-      font-size: 1.1em;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 8px var(--neon-pink);
     }
 
     .card p, .card ul {
       color: #bbb;
-      margin: 0;
-      line-height: 1.4em;
+      line-height: 1.6em;
     }
 
     ul {
@@ -122,46 +125,48 @@
     ul li::before {
       content: ">";
       color: var(--neon-cyan);
-      margin-right: 6px;
+      margin-right: 8px;
     }
 
     .hint-button {
       background: var(--neon-cyan);
       color: #000;
       border: none;
-      padding: 8px 16px;
-      border-radius: 5px;
+      padding: 12px 20px;
+      border-radius: 6px;
       cursor: pointer;
-      font-size: 0.9em;
+      margin-top: 15px;
+      transition: all 0.3s;
       font-weight: bold;
-      box-shadow: 0 0 10px rgba(17,218,245,0.6);
-      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(17,218,245,0.6);
     }
 
     .hint-button:hover {
       background: var(--neon-purple);
       color: #fff;
-      box-shadow: 0 0 15px var(--neon-purple);
+      box-shadow: 0 0 20px var(--neon-purple);
     }
 
     .hint {
       display: none;
-      margin-top: 8px;
+      margin-top: 10px;
       background: #0f0f0f;
-      padding: 8px;
+      padding: 12px;
       color: var(--neon-cyan);
-      border-radius: 5px;
+      border-radius: 6px;
       border: 1px solid var(--neon-purple);
-      font-size: 0.85em;
+      box-shadow: 0 0 15px rgba(144,37,176,0.5);
     }
 
     .disclaimer {
-      background: rgba(17,17,17,0.9);
+      background: rgba(17,17,17,0.95);
       color: #777;
-      font-size: 0.75em;
-      padding: 8px;
+      font-size: 0.9em;
+      padding: 15px;
       text-align: center;
-      border-top: 1px solid var(--neon-pink);
+      border-top: 2px solid var(--neon-pink);
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
@@ -183,69 +188,95 @@
   <main>
     <div class="card">
       <h2>Link Status</h2>
-      <p>Mulanje link is <span style="color:#11DAF5">ACTIVE</span>.<br/> Last Login: 3 days ago.</p>
+      <p>Mulanje link is <span style="color:#11DAF5">ACTIVE</span>.<br/> No unauthorized entry detected.<br/> Last Login: 3 days ago.</p>
     </div>
+   
     <div class="card">
       <h2>Node Status</h2>
       <p>Flames265 node is <span style="color:#11DAF5">ONLINE</span>.<br/> Data Encrypted.</p>
     </div>
+
     <div class="card">
       <h2>Channel Status</h2>
-      <p>Radio frequency <span style="color:#C71852">BLOCKED</span>.<br/> Signal Jammed.</p>
+      <p>Radio frequency is <span style="color:#C71852">BLOCKED</span>.<br/> Signal Jammed.</p>
     </div>
+
     <div class="card">
       <h2>Console</h2>
       <ul>
-        <li>[2025-08-01 22:18:54] Node α rebooted</li>
-        <li>[2025-08-01 22:18:56] Node α connected</li>
+        <li>[2025-08-01 22:18:54] Node α Flames265 rebooted</li>
+        <li>[2025-08-01 22:18:56] Node α Flames265 connected</li>
         <li>[2025-08-01 01:42:03] Data Transfer Started...</li>
       </ul>
     </div>
+	   <script>
+     // System initialized... 🚩
+     // DEBUG: flag_meta[0x03];
+     const a = 'fla', b = 'g{v', c = '2.', d = '0.', e = '7}';
+     const output = a + b + c + d + e;
+    </script>
+
     <div class="card">
       <h2>Access DarkNode NETWORK</h2>
       <p>Biometrics Required!</p>
       <button class="hint-button" onclick="toggleHint()">ENTER</button>
-      <div class="hint" id="hintBox">⚠ Authentication Failed</div>
+      <div class="hint" id="hintBox">⚠ Authentication Failed: No Biometrics Provided</div>
     </div>
   </main>
 
   <div class="disclaimer">
-    ⚠️ Fictional Capture The Flag (CTF) challenge. Unauthorized use is prohibited.
+    ⚠️ This is part of a fictional cybersecurity Capture The Flag (CTF) challenge. Unauthorized use is prohibited.
   </div>
 
   <script>
+    // Toggle biometrics warning
     function toggleHint() {
       const hint = document.getElementById("hintBox");
       hint.style.display = hint.style.display === "none" ? "block" : "none";
     }
-    window.onload = () => document.getElementById("hintBox").style.display = "none";
+    window.onload = () => {
+      document.getElementById("hintBox").style.display = "none";
+    };
 
-    // Matrix Animation
+    // Matrix Background Animation
     const canvas = document.getElementById("matrix");
     const ctx = canvas.getContext("2d");
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-    const letters = "01";
-    const fontSize = 12;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
 
-    function draw() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#11DAF5";
-      ctx.font = fontSize + "px monospace";
-      drops.forEach((y, i) => {
-        const text = letters.charAt(Math.floor(Math.random() * letters.length));
-        ctx.fillText(text, i * fontSize, y * fontSize);
-        drops[i] = y * fontSize > canvas.height && Math.random() > 0.975 ? 0 : y + 1;
-      });
-    }
-    setInterval(draw, 50);
-    window.onresize = () => {
+    let fontSize = 16;
+    let columns;
+    let drops;
+
+    function initMatrix() {
       canvas.height = window.innerHeight;
       canvas.width = window.innerWidth;
-    };
+
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    }
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const colors = ["#11DAF5", "#C71852", "#9025B0"];
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = Math.random() > 0.5 ? "1" : "0";
+        ctx.fillStyle = colors[Math.floor(Math.random() * colors.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    initMatrix();
+    setInterval(drawMatrix, 50);
+
+    window.onresize = initMatrix;
   </script>
 </body>
 </html>
