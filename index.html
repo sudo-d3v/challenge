@@ -1,4 +1,4 @@
-<!-- DarkNode Build -->
+<!-- DarkNode Build - Hacker Vibe + Matrix Background -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,162 +6,224 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DarkNode</title>
   <style>
-    body {
-      font-family: 'Courier New', monospace;
-      margin: 0;
-      background-color: #0d0d0d;
-      color: #11DAF5;
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+    :root {
+      --neon-pink: #C71852;
+      --neon-purple: #9025B0;
+      --neon-cyan: #11DAF5;
+      --dark-bg: #0d0d0d;
     }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      margin: 0;
+      background: var(--dark-bg);
+      color: var(--neon-cyan);
+      overflow: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: black;
+    }
+
     header {
-      background: linear-gradient(90deg, #000000);
+      background: rgba(0,0,0,0.8);
       padding: 30px;
       text-align: center;
-      border-bottom: 3px solid #11DAF5;
+      border-bottom: 3px solid var(--neon-cyan);
+      box-shadow: 0 0 20px rgba(17, 218, 245, 0.5);
     }
+
     header h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       margin: 0;
-      color: #11DAF5;
+      color: var(--neon-cyan);
+      text-shadow: 0 0 10px var(--neon-cyan);
     }
+
     header p {
       font-style: italic;
-      color: #ddd;
+      color: #aaa;
+      letter-spacing: 2px;
     }
+
     nav {
-      background: #1a1a1a;
+      background: rgba(18,18,18,0.9);
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
+      gap: 20px;
       padding: 15px;
-      border-bottom: 2px solid #9025B0;
+      border-bottom: 2px solid var(--neon-purple);
+      box-shadow: 0 0 20px rgba(144,37,176,0.3);
     }
+
     nav a button {
-      text-decoration: none;
-      background: linear-gradient(135deg, #C71852, #9025B0);
+      background: linear-gradient(135deg, var(--neon-pink), var(--neon-purple));
       color: #fff;
       font-weight: bold;
       border: none;
-      padding: 10px 20px;
-      border-radius: 6px;
+      padding: 12px 24px;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
+      box-shadow: 0 0 12px rgba(199,24,82,0.5);
     }
+
     nav a button:hover {
-      background: #11DAF5;
+      background: var(--neon-cyan);
       color: #000;
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 0 20px var(--neon-cyan);
     }
+
     main {
       padding: 40px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      position: relative;
+      z-index: 2;
     }
+
     .card {
-      background-color: #1c1c1c;
-      border: 1px solid #333;
+      background-color: rgba(22,22,22,0.9);
+      border: 1px solid #222;
       padding: 25px;
-      margin: 20px 0;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(144, 37, 176, 0.4);
+      margin: 30px 0;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(144, 37, 176, 0.4);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 25px rgba(17, 218, 245, 0.6);
+    }
+
     .card h2 {
-      color: #C71852;
+      color: var(--neon-pink);
       margin-bottom: 15px;
+      text-shadow: 0 0 8px var(--neon-pink);
     }
+
     .card p, .card ul {
-      color: #ccc;
+      color: #bbb;
       line-height: 1.6em;
     }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: ">";
+      color: var(--neon-cyan);
+      margin-right: 8px;
+    }
+
     .hint-button {
-      background: #11DAF5;
+      background: var(--neon-cyan);
       color: #000;
       border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
+      padding: 12px 20px;
+      border-radius: 6px;
       cursor: pointer;
-      margin-top: 10px;
-      transition: background 0.3s;
+      margin-top: 15px;
+      transition: all 0.3s;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(17,218,245,0.6);
     }
+
     .hint-button:hover {
-      background: #9025B0;
+      background: var(--neon-purple);
       color: #fff;
+      box-shadow: 0 0 20px var(--neon-purple);
     }
+
     .hint {
       display: none;
       margin-top: 10px;
-      background: #222;
-      padding: 10px;
-      color: #11DAF5;
-      border-radius: 5px;
-      border: 1px solid #9025B0;
-    }
-    .disclaimer {
-      background: #111;
-      color: #888;
-      font-size: 0.9em;
+      background: #0f0f0f;
       padding: 12px;
+      color: var(--neon-cyan);
+      border-radius: 6px;
+      border: 1px solid var(--neon-purple);
+      box-shadow: 0 0 15px rgba(144,37,176,0.5);
+    }
+
+    .disclaimer {
+      background: rgba(17,17,17,0.95);
+      color: #777;
+      font-size: 0.9em;
+      padding: 15px;
       text-align: center;
-      border-top: 2px solid #C71852;
+      border-top: 2px solid var(--neon-pink);
+      position: relative;
+      z-index: 2;
     }
   </style>
 </head>
 <body>
+  <canvas id="matrix"></canvas>
 
   <header>
     <h1>DarkNode</h1>
-    <p>Virtual Private Network</p>
+    <p>Access Restricted Virtual Network</p>
   </header>
 
   <nav>
-    <a href="#"><button onclick="alert('System LOCKED')">LINKS</button></a>
-    <a href="#"><button onclick="alert('System LOCKED')">NODES</button></a>
-    <a href="#"><button onclick="alert('System LOCKED')">CHANNELS</button></a>
-    <a href="#"><button onclick="alert('System LOCKED')">TERMINAL</button></a>
+    <a href="#"><button onclick="alert('⚠ ACCESS DENIED ⚠')">LINKS</button></a>
+    <a href="#"><button onclick="alert('⚠ ACCESS DENIED ⚠')">NODES</button></a>
+    <a href="#"><button onclick="alert('⚠ ACCESS DENIED ⚠')">CHANNELS</button></a>
+    <a href="#"><button onclick="alert('⚠ ACCESS DENIED ⚠')">TERMINAL</button></a>
   </nav>
 
   <main>
     <div class="card">
       <h2>Link Status</h2>
-      <p>Mulanje link is active. <br/> No unauthorized entry detected. <br/> Last Login: 3 days ago.</p>
+      <p>Mulanje link is <span style="color:#11DAF5">ACTIVE</span>.<br/> No unauthorized entry detected.<br/> Last Login: 3 days ago.</p>
     </div>
    
     <div class="card">
       <h2>Node Status</h2>
-      <p>Flames265 node is online. <br/> Data Encrypted. </p>
+      <p>Flames265 node is <span style="color:#11DAF5">ONLINE</span>.<br/> Data Encrypted.</p>
     </div>
 
     <div class="card">
       <h2>Channel Status</h2>
-      <p>Radio frequency is off the radar. <br/> Signal Blocked. </p>
+      <p>Radio frequency is <span style="color:#C71852">BLOCKED</span>.<br/> Signal Jammed.</p>
     </div>
 
     <div class="card">
       <h2>Console</h2>
       <ul>
-        <li>[2025-05-11 22:18:54] Node α Flames265 rebooted</li>
-        <li>[2025-05-11 22:18:56] Node α Flames265 connected</li>
-        <li>[2025-05-12 01:42:03] Data Transfer Started...</li>
+        <li>[2025-08-1 22:18:54] Node α Flames265 rebooted</li>
+        <li>[2025-08-1 22:18:56] Node α Flames265 connected</li>
+        <li>[2025-08-1 01:42:03] Data Transfer Started...</li>
       </ul>
     </div>
-	
-    <script>
-     // System initialized... 🚩
-     // DEBUG: flag_meta[0x03];
-      f423e38a713ca4cac007bdec2dd35e1d 
-    </script>
 	
     <div class="card">
       <h2>Access DarkNode NETWORK</h2>
       <p>Biometrics Required!</p>
       <button class="hint-button" onclick="toggleHint()">ENTER</button>
-      <div class="hint" id="hintBox">No Biometrics Provided</div>
+      <div class="hint" id="hintBox">⚠ Authentication Failed: No Biometrics Provided</div>
     </div>
   </main>
 
   <div class="disclaimer">
-    ⚠️ This webpage is part of a cybersecurity Capture The Flag (CTF) challenge. It is entirely fictional and not affiliated with any real organization.
+    ⚠️ This is part of a fictional cybersecurity Capture The Flag (CTF) challenge. Unauthorized use is prohibited.
   </div>
 
   <script>
+    // Toggle biometrics warning
     function toggleHint() {
       const hint = document.getElementById("hintBox");
       hint.style.display = hint.style.display === "none" ? "block" : "none";
@@ -169,7 +231,46 @@
     window.onload = () => {
       document.getElementById("hintBox").style.display = "none";
     };
+
+    // Matrix Background Animation
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "01";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+
+    const drops = [];
+    for(let x = 0; x < columns; x++) drops[x] = 1;
+
+    function draw() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#11DAF5";
+      ctx.font = fontSize + "px monospace";
+
+      for(let i = 0; i < drops.length; i++) {
+        const text = letters.charAt(Math.floor(Math.random() * letters.length));
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if(drops[i] * fontSize > canvas.height && Math.random() > 0.975)
+          drops[i] = 0;
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 50);
+
+    // Resize canvas on window change
+    window.onresize = () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    };
   </script>
 </body>
 </html>
-
